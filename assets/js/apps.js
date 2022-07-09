@@ -32,7 +32,7 @@ function validateElements() {
         return;
     }//More than ten
     else {
-        document.querySelector('#message').innerHTML = "Llevas demasiados sticket, máximo es 10. Llevas " + sumElement;
+        document.querySelector('#message').innerHTML = "Llevas demasiados sticker, máximo es 10. Llevas " + sumElement;
         return;
     }
 }
