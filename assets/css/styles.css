@@ -1,0 +1,26 @@
+.items {
+  display: flex;
+  justify-content: center;
+  align-content: space-evenly;
+}
+.items div {
+  margin: 2%;
+}
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items-wning{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-flow: column nowrap;
+}
