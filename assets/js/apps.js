@@ -19,21 +19,37 @@ document.querySelector('#marioImg').onclick = function () {
     }
 }
 
-// Items Controll, Challenge 2
+// Items Control, Challenge 2
 function validateElements() {
-    let inputMario = parseInt(document.querySelector('#inputMario').value)
-    let inputHomer = parseInt(document.querySelector('#inputHomer').value)
-    let inputPuppys = parseInt(document.querySelector('#inputPuppys').value)
-    sumElement = inputMario + inputHomer + inputPuppys
+    //Sum elements
+    sumElement = parseInt(document.querySelector('#inputMario').value) + parseInt(document.querySelector('#inputHomer').value) + parseInt(document.querySelector('#inputPuppys').value)
+    //Validate less or equals 10, verify number
     if (sumElement <= 10 && isNaN(sumElement) == false) {
         document.querySelector('#message').innerHTML = "Llevas " + sumElement;
         return;
-    } if (isNaN(sumElement)) {
+    } if (isNaN(sumElement)) { //Verify nan
         document.querySelector('#message').innerHTML = "Favor solo ingresar valor númericos ";
         return;
-    }
+    }//More than ten
     else {
         document.querySelector('#message').innerHTML = "Llevas demasiados sticket, máximo es 10. Llevas " + sumElement;
         return;
+    }
+}
+
+//Password Check
+function numValidation() {
+    //Concat the information as a text
+    let concatNum = document.querySelector('#first-number').value + document.querySelector('#second-number').value + document.querySelector('#third-number').value
+    //Soft validation 911
+    if (concatNum == 911) {
+        document.querySelector('#validation').innerHTML = "Password 1 correcto";
+        return;
+    } if (concatNum == 714) { //Soft validation 714
+        document.querySelector('#validation').innerHTML = "Password 2 correcto";
+        return
+    } else { //Other
+        document.querySelector('#validation').innerHTML = "Password erroneo";
+        return
     }
 }
