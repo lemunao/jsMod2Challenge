@@ -1,4 +1,4 @@
-//Image mod
+//Image mod Challenge one
 //Create pointer
 var cont = 0;
 //Make query selector to find event onclick and create function to make validations
@@ -17,3 +17,5 @@ document.querySelector('#marioImg').onclick = function () {
         cont = 0; 
     }
 }
+
+// Items Controll, Challenge 2
