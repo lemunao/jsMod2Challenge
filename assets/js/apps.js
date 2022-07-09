@@ -1,22 +1,19 @@
-/*function changeBorder() {
-    if (document.querySelector('#marioImg')) {
-        document.querySelector('#marioImg').style.border = "20px solid red";
-        imgChange = 0        
-    } if(imgChange = 0){
-        document.querySelector('#marioImg').style.border ;
-    }
-}
-*/
+//Image mod
+//Create pointer
 var cont = 0;
+//Make query selector to find event onclick and create function to make validations
 document.querySelector('#marioImg').onclick = function () {
-    var image = document.querySelector('#marioImg');
-    
+    var image = document.querySelector('#marioImg');    
+    //Start condition
     if (cont == 0) {
-        image.style.border = '20px solid red';
+        //Added atributes to image
+        image.setAttribute("style", "border: 2px solid red");
+        //pointer = 1
         cont = 1;
     } else {
-        image.style.border = '0';
-        cont = 0;
+        //remove properties
+        image.style.removeProperty("border");
+        //pointer = 0
+        cont = 0; 
     }
-
 }
